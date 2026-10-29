@@ -76,9 +76,15 @@ Intelli-Core then appears in your applications menu.
 
 ## 3. Start working
 
-Intelli-Core opens on the Belgian Tax KB example. Edit any canvas and the formalisation dock on the right translates it immediately. Your work is saved on this computer as you go. **KB › Branches** lets you try changes on a branch and merge them back after review.
+Intelli-Core opens on the Belgian Tax KB example. Edit any canvas and the formalisation dock on the right translates it immediately. Each knowledge domain is a workspace, saved as an `.intellicore` file: use **File › New Workspace**, **Open…**, **Save** and **Save As…**. A dot next to the workspace name means there are unsaved changes, and Intelli-Core asks before closing them. Double-click an `.intellicore` file to open it; the app reopens your last workspace when it starts. Click any clause to go to its source: the canvas it was written in, or the highlighted passages of the document it was extracted from. **KB › Branches** lets you try changes on a branch and merge them back after review.
 
-## 4. Connect IDP Studio (optional)
+## 4. Start a domain with Claude (optional)
+
+**File › New with AI…** lets Claude help you set up a new knowledge domain: it asks about the domain, searches the web for sources, and proposes rules, parameters, concepts and tests. You accept or skip each one.
+
+It needs your own Claude API key from the [Claude Console](https://platform.claude.com). Paste it in **Settings › Claude**. Intelli-Core keeps it in your system keychain, and use is billed to your Anthropic account.
+
+## 5. Connect IDP Studio (optional)
 
 These features need IDP Studio (ask Bart Jan for access) running on the same computer:
 - the **Documents** canvas;
