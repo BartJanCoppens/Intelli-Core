@@ -98,7 +98,7 @@ These features need IDP Studio (ask Bart Jan for access) running on the same com
 
 If IDP Studio runs on another port, start Intelli-Core with `IDP_STUDIO_URL` set, for example `IDP_STUDIO_URL=http://127.0.0.1:9000`.
 
-**Visualisation** turns the knowledge base into an interactive app. In **Design**, place the knowledge base's values on a dashboard. Settle the ones you leave off: give a default, or leave them free. Add buttons that find solutions, the best value, or an explanation. Then click **View**: the dashboard opens on its own page. Change any value there and IDP-Z3 shows what follows, with a **Why?** for each derived value.
+**Visualisation** turns the knowledge base into an interactive app. In **Design**, place the knowledge base's values on a dashboard. Settle the ones you leave off: give a default, or leave them free. Add buttons that find solutions, the best value, or an explanation. Then click **View**: the dashboard opens on its own page. Change any value there and IDP-Z3 shows what follows, with a **Why?** for each derived value. When a button finds solutions, they appear in the dashboard's own fields, one at a time: step through them with ‹ ›, and see which values differ between them.
 
 ## Updates
 
