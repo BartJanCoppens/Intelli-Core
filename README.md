@@ -104,6 +104,8 @@ If IDP Studio runs on another port, start Intelli-Core with `IDP_STUDIO_URL` set
 
 If you have an Apple Developer ID certificate, Export app… signs the app with it and can have Apple notarise it; recipients then open it like any other app. Without one, the first time recipients open it, macOS blocks it: they open **System Settings › Privacy & Security**, choose **Open Anyway** for the app, and confirm. After that it opens normally.
 
+**Generate Python…** turns the knowledge base into Python functions for the inputs and outputs you choose. IDP-Z3 derives a decision table from the knowledge and proves that each row gives exactly its own answer: a value, a set of possible values, any value, or "inconsistent". Intelli-Core writes the table as readable Python, with a comment on each row naming its rules. You see the table, the code and its tests, and how fast it answers compared with IDP-Z3. You can download the module and its tests. Running the tests in the app needs Python 3 on your Mac (from python.org, or `brew install python`).
+
 ## Updates
 
 - **Mac**, **Windows** and **Linux AppImage**: Intelli-Core tells you when a new version is ready. Click **Download and install**; it installs the next time you restart Intelli-Core.
