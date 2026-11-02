@@ -100,6 +100,10 @@ If IDP Studio runs on another port, start Intelli-Core with `IDP_STUDIO_URL` set
 
 **Visualisation** turns the knowledge base into an interactive app. In **Design**, place the knowledge base's values on a dashboard. Settle the ones you leave off: give a default, or leave them free. Add buttons that find solutions, the best value, or an explanation. Then click **View**: the dashboard opens on its own page. Change any value there and IDP-Z3 shows what follows, with a **Why?** for each derived value. When a button finds solutions, they appear in the dashboard's own fields, one at a time: step through them with ‹ ›, and see which values differ between them.
 
+**Export app…** (on a Mac with an Apple chip) turns a dashboard into a Mac app you can give to others. They install it and question the knowledge base on their own, without Intelli-Core or IDP Studio and without internet. They can save cases on their Mac, export a case to PDF, and share a case with a colleague, who opens it in their own copy of the app. Exporting needs IDP Studio installed in Applications (Apple-chip version).
+
+If you have an Apple Developer ID certificate, Export app… signs the app with it and can have Apple notarise it; recipients then open it like any other app. Without one, the first time recipients open it, macOS blocks it: they open **System Settings › Privacy & Security**, choose **Open Anyway** for the app, and confirm. After that it opens normally.
+
 ## Updates
 
 - **Mac**, **Windows** and **Linux AppImage**: Intelli-Core tells you when a new version is ready. Click **Download and install**; it installs the next time you restart Intelli-Core.
