@@ -76,7 +76,7 @@ Intelli-Core then appears in your applications menu.
 
 ## 3. Start working
 
-Intelli-Core opens on the Belgian Tax KB example. Edit any canvas and the formalisation dock on the right translates it immediately. Each knowledge domain is a workspace, saved as an `.intellicore` file: use **File › New Workspace**, **Open…**, **Save** and **Save As…**. A dot next to the workspace name means there are unsaved changes, and Intelli-Core asks before closing them. Double-click an `.intellicore` file to open it; the app reopens your last workspace when it starts. Click any clause to go to its source: the canvas it was written in, or the highlighted passages of the document it was extracted from. **KB › Branches** lets you try changes on a branch and merge them back after review.
+Intelli-Core opens on an example; the **Examples** menu has the others. Edit any canvas and the formalisation dock on the right translates it immediately. Each knowledge domain is a workspace, saved as an `.intellicore` file: use **File › New Workspace**, **Open…**, **Save** and **Save As…**. A dot next to the workspace name means there are unsaved changes, and Intelli-Core asks before closing them. Double-click an `.intellicore` file to open it; the app reopens your last workspace when it starts. Click any clause to go to its source: the canvas it was written in, or the highlighted passages of the document it was extracted from. **KB › Branches** lets you try changes on a branch and merge them back after review.
 
 ## 4. Start a domain with Claude (optional)
 
@@ -105,6 +105,8 @@ If IDP Studio runs on another port, start Intelli-Core with `IDP_STUDIO_URL` set
 If you have an Apple Developer ID certificate, Export app… signs the app with it and can have Apple notarise it; recipients then open it like any other app. Without one, the first time recipients open it, macOS blocks it: they open **System Settings › Privacy & Security**, choose **Open Anyway** for the app, and confirm. After that it opens normally.
 
 **Generate Python…** turns the knowledge base into Python functions for the inputs and outputs you choose. IDP-Z3 derives a decision table from the knowledge and proves that each row gives exactly its own answer: a value, a set of possible values, any value, or "inconsistent". Intelli-Core writes the table as readable Python, with a comment on each row naming its rules. You see the table, the code and its tests, and how fast it answers compared with IDP-Z3. You can download the module and its tests. Running the tests in the app needs Python 3 on your Mac (from python.org, or `brew install python`).
+
+Answers can be ranges: "from 0 (included) to 130 (excluded)", with each end clearly included or not, or a set with gaps such as "0, or from 60 to 130". You can also ask about a range: is a person aged 16 to 25 eligible? The answer comes in pieces, "16 up to 21: no; 21 to 25: yes", and the **Try** tab lets you ask such questions yourself. The **Examples** menu opens the built-in examples, including *Driving licence*, which shows ranges at work.
 
 ## Updates
 
