@@ -89,7 +89,8 @@ It needs your own Claude API key from the [Claude Console](https://platform.clau
 These features need IDP Studio (ask Bart Jan for access) running on the same computer:
 - the **Documents** canvas;
 - **Run in IDP-Z3** under **KB › Tests**;
-- the assistant's **Detect gaps** and **Generate tests**;
+- the **Health** check under **KB › Health**;
+- the assistant's **Generate tests**;
 - the **Open Knowledge File** export;
 - **Visualisation**.
 
@@ -97,6 +98,8 @@ These features need IDP Studio (ask Bart Jan for access) running on the same com
 2. In Intelli-Core, open **Workspace › Documents**. It shows **Connected to IDP Studio**.
 
 If IDP Studio runs on another port, start Intelli-Core with `IDP_STUDIO_URL` set, for example `IDP_STUDIO_URL=http://127.0.0.1:9000`.
+
+**KB › Health** checks the knowledge base with IDP-Z3 by itself, each time you open the KB view after a change. IDP-Z3 proves what it reports: values no rule covers ("no rule about speedOk covers road = country"), rules that apply in the same situation (and contradict each other, or not), rules that can never apply, and rules the others already imply. Alongside, it lists what the knowledge base lacks, such as a parameter without a value; those come from the knowledge base's structure and say so. A dot after the tab says whether the check is current (green), running (orange) or out of date (hollow). Close a finding by fixing the rule, or mark it as intended or as open world, with a one-line reason; the log keeps who decided and why. In View and in exported apps, a value that is unknown because of such a gap says so, for example "No rule for road = country".
 
 **Visualisation** turns the knowledge base into an interactive app. In **Design**, place the knowledge base's values on a dashboard. Settle the ones you leave off: give a default, or leave them free. Add buttons that find solutions, the best value, or an explanation. Then click **View**: the dashboard opens on its own page. Change any value there and IDP-Z3 shows what follows, with a **Why?** for each derived value. When a button finds solutions, they appear in the dashboard's own fields, one at a time: step through them with ‹ ›, and see which values differ between them.
 
